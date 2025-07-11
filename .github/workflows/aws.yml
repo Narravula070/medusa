@@ -28,12 +28,12 @@ jobs:
       # Step 4: Build the Docker image
       - name: Build Docker image
         run: |
-          docker build -t shunnualisha8980/medusa-store:latest .
+          docker build -t muni070/medusa-store:latest .
 
       # Step 5: Push Docker image to Docker Hub
       - name: Push Docker image to Docker Hub
         run: |
-          docker push shunnualisha8980/medusa-store:latest
+          docker push muni070/medusa-store:latest
 
       # Step 6: Configure AWS credentials
       - name: Configure AWS credentials
@@ -46,8 +46,8 @@ jobs:
       # Step 7: Pull Docker image (for ECS)
       - name: Pull Docker image from Docker Hub
         run: |
-          docker pull shunnualisha8980/medusa-store:latest
-          echo "Pulled image: shunnualisha8980/medusa-store:latest"
+          docker pull muni070/medusa-store:latest
+          echo "Pulled image: muni070/medusa-store:latest"
 
       # Step 8: Update ECS task definition
       - name: Update ECS task definition
